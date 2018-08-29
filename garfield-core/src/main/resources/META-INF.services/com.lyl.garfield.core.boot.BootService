@@ -1,0 +1,4 @@
+com.lyl.garfield.core.jvm.JVMService
+com.lyl.garfield.cat.core.remote.TraceSegmentServiceClient
+com.lyl.garfield.cat.core.context.ContextManager
+com.lyl.garfield.cat.core.sampling.SamplingService

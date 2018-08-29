@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>com.lyl</groupId>
+        <artifactId>garfield</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.lyl</groupId>
+    <artifactId>garfield-plugin</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>spring-plugins</module>
+        <module>feign-default-http-9.x-plugin</module>
+        <module>toolkit-trace-activation</module>
+        <module>mysql-5.x-plugin</module>
+        <module>jdbc-commons</module>
+        <module>tomcat-8.x-plugin</module>
+        <module>toolkit-log4j-2.x-activation</module>
+        <module>activemq-5.x-plugin</module>
+        <module>httpclient-4.x-plugin</module>
+        <module>aliyuncs-2.x-plugin</module>
+        <module>druid-1.x-plugin</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <sdk.plugin.related.dir></sdk.plugin.related.dir>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.lyl</groupId>
+            <artifactId>garfield-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>ant-contrib</groupId>
+            <artifactId>ant-contrib</artifactId>
+            <version>1.0b3</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>ant</groupId>
+                    <artifactId>ant</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.ant</groupId>
+            <artifactId>ant-nodeps</artifactId>
+            <version>1.8.1</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <taskdef resource="net/sf/antcontrib/antcontrib.properties"
+                                         classpathref="maven.runtime.classpath"/>
+                                <if>
+                                    <equals arg1="${project.packaging}" arg2="jar"/>
+                                    <then>
+                                        <mkdir
+                                                dir="${project.build.directory}${sdk.plugin.related.dir}/../../../packages/garfield-agent/plugins"/>
+                                        <copy
+                                                file="${project.build.directory}/${project.artifactId}-${project.version}.jar"
+                                                tofile="${project.build.directory}${sdk.plugin.related.dir}/../../../packages/garfield-agent/plugins/${project.artifactId}-${project.version}.jar"
+                                                overwrite="true"/>
+                                    </then>
+                                </if>
+                            </tasks>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

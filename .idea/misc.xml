@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-agent/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-api/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-core/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-plugin/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-toolkit/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-plugin/activemq-5.x-plugin/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-plugin/aliyuncs-2.x-plugin/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-plugin/druid-1.x-plugin/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-plugin/feign-default-http-9.x-plugin/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-plugin/httpclient-4.x-plugin/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-plugin/jdbc-commons/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-plugin/mysql-5.x-plugin/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-plugin/spring-plugins/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-plugin/tomcat-8.x-plugin/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-plugin/toolkit-log4j-2.x-activation/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-plugin/toolkit-trace-activation/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-toolkit/cat-toolkit-log4j-2.x/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-plugin/spring-plugins/mvc-annotation-4.x-plugin/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-plugin/spring-plugins/mvc-annotation-commons/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-plugin/spring-plugins/spring-cloud-feign-1.x-plugin/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-toolkit/garfield-toolkit-trace/pom.xml" />
+        <option value="$PROJECT_DIR$/garfield-toolkit/garfield-toolkit-log4j-2.x/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

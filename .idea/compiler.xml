@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="activemq-5.x-plugin" />
+        <module name="aliyuncs-2.x-plugin" />
+        <module name="cat-toolkit-log4j-2.x" />
+        <module name="druid-1.x-plugin" />
+        <module name="feign-default-http-9.x-plugin" />
+        <module name="garfield-agent" />
+        <module name="garfield-api" />
+        <module name="garfield-core" />
+        <module name="garfield-toolkit-log4j-2.x" />
+        <module name="garfield-toolkit-trace" />
+        <module name="httpclient-4.x-plugin" />
+        <module name="jdbc-commons" />
+        <module name="mvc-annotation-4.x-plugin" />
+        <module name="mvc-annotation-commons" />
+        <module name="mysql-5.x-plugin" />
+        <module name="spring-cloud-feign-1.x-plugin" />
+        <module name="tomcat-8.x-plugin" />
+        <module name="toolkit-log4j-2.x-activation" />
+        <module name="toolkit-trace-activation" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="activemq-5.x-plugin" target="1.8" />
+      <module name="aliyuncs-2.x-plugin" target="1.8" />
+      <module name="cat-toolkit-log4j-2.x" target="1.8" />
+      <module name="cat-toolkit-trace" target="1.8" />
+      <module name="druid-1.x-plugin" target="1.8" />
+      <module name="feign-default-http-9.x-plugin" target="1.8" />
+      <module name="garfield" target="1.5" />
+      <module name="garfield-agent" target="8" />
+      <module name="garfield-api" target="1.8" />
+      <module name="garfield-core" target="8" />
+      <module name="garfield-plugin" target="1.8" />
+      <module name="garfield-toolkit" target="1.5" />
+      <module name="garfield-toolkit-log4j-2.x" target="1.8" />
+      <module name="garfield-toolkit-trace" target="1.8" />
+      <module name="httpclient-4.x-plugin" target="1.8" />
+      <module name="jdbc-commons" target="1.8" />
+      <module name="mvc-annotation-4.x-plugin" target="1.8" />
+      <module name="mvc-annotation-commons" target="1.8" />
+      <module name="mysql-5.x-plugin" target="1.8" />
+      <module name="spring-cloud-feign-1.x-plugin" target="1.8" />
+      <module name="spring-plugins" target="1.8" />
+      <module name="tomcat-8.x-plugin" target="1.8" />
+      <module name="toolkit-log4j-2.x-activation" target="1.8" />
+      <module name="toolkit-trace-activation" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
