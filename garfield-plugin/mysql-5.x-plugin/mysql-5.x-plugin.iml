@@ -11,7 +11,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: mysql:mysql-connector-java:6.0.6" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: mysql:mysql-connector-java:5.1.44" level="project" />
     <orderEntry type="module" module-name="jdbc-commons" />
     <orderEntry type="module" module-name="garfield-core" />
     <orderEntry type="module" module-name="garfield-api" />
