@@ -24,8 +24,6 @@
         <shade.com.google.target>${shade.package}.${shade.com.google.source}</shade.com.google.target>
         <shade.com.alibaba.source>com.alibaba</shade.com.alibaba.source>
         <shade.com.alibaba.target>${shade.package}.${shade.com.alibaba.source}</shade.com.alibaba.target>
-        <shade.org.apache.kafka.source>org.apache.kafka</shade.org.apache.kafka.source>
-        <shade.org.apache.kafka.target>${shade.package}.${shade.org.apache.kafka.source}</shade.org.apache.kafka.target>
         <shade.io.protostuff.source>io.protostuff</shade.io.protostuff.source>
         <shade.io.protostuff.target>${shade.package}.${shade.io.protostuff.source}</shade.io.protostuff.target>
         <shade.org.slf4j.source>org.slf4j</shade.org.slf4j.source>
@@ -53,11 +51,6 @@
             <groupId>com.lmax</groupId>
             <artifactId>disruptor</artifactId>
             <version>3.3.6</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka-clients</artifactId>
-            <version>0.11.0.0</version>
         </dependency>
         <dependency>
             <groupId>io.protostuff</groupId>
@@ -115,10 +108,6 @@
                                 <relocation>
                                     <pattern>${shade.io.protostuff.source}</pattern>
                                     <shadedPattern>${shade.io.protostuff.target}</shadedPattern>
-                                </relocation>
-                                <relocation>
-                                    <pattern>${shade.org.apache.kafka.source}</pattern>
-                                    <shadedPattern>${shade.org.apache.kafka.target}</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>${shade.com.lmax.disruptor.source}</pattern>

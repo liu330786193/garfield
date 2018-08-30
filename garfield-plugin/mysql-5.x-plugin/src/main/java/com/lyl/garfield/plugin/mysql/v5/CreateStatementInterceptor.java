@@ -16,7 +16,7 @@
  * Project repository: https://github.com/OpenSkywalking/skywalking
  */
 
-package com.lyl.garfield.plugin.jdbc.mysql.v5;
+package com.lyl.garfield.plugin.mysql.v5;
 
 import com.lyl.garfield.core.plugin.interceptor.enhance.EnhancedInstance;
 import com.lyl.garfield.core.plugin.interceptor.enhance.InstanceMethodsAroundInterceptor;
@@ -30,7 +30,7 @@ import java.lang.reflect.Method;
  *
  * @author zhangxin
  */
-public class CreateCallableStatementInterceptor implements InstanceMethodsAroundInterceptor {
+public class CreateStatementInterceptor implements InstanceMethodsAroundInterceptor {
     @Override
     public void beforeMethod(EnhancedInstance objInst, Method method, Object[] allArguments, Class<?>[] argumentsTypes,
                              MethodInterceptResult result) throws Throwable {
@@ -40,12 +40,13 @@ public class CreateCallableStatementInterceptor implements InstanceMethodsAround
     public Object afterMethod(EnhancedInstance objInst, Method method, Object[] allArguments, Class<?>[] argumentsTypes,
         Object ret) throws Throwable {
         if (ret instanceof EnhancedInstance) {
-            ((EnhancedInstance)ret).setSkyWalkingDynamicField(new StatementEnhanceInfos((ConnectionInfo)objInst.getSkyWalkingDynamicField(), (String)allArguments[0], "CallableStatement"));
+            ((EnhancedInstance)ret).setSkyWalkingDynamicField(new StatementEnhanceInfos((ConnectionInfo)objInst.getSkyWalkingDynamicField(), "", "CallableStatement"));
         }
         return ret;
     }
 
     @Override public void handleMethodException(EnhancedInstance objInst, Method method, Object[] allArguments,
         Class<?>[] argumentsTypes, Throwable t) {
+
     }
 }

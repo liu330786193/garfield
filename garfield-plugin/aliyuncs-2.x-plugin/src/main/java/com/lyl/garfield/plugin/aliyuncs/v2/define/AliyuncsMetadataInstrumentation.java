@@ -1,4 +1,4 @@
-package com.lyl.garfield.plugin.druid.v1.define;/*
+package com.lyl.garfield.plugin.aliyuncs.v2.define;/*
  * Copyright 2017, OpenSkywalking Organization All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -36,7 +36,7 @@ public class AliyuncsMetadataInstrumentation extends ClassInstanceMethodsEnhance
 
     private static final String METADATAE_METHOD = "getObjectMetadata";
 
-    private static final String METADATA_INTERCEPT_CLASS = "com.lyl.garfield.plugin.aliyuncs.v4.AliyuncsMetadataInterceptor";
+    private static final String METADATA_INTERCEPT_CLASS = "com.lyl.garfield.plugin.aliyuncs.v2.AliyuncsMetadataInterceptor";
 
 
     @Override

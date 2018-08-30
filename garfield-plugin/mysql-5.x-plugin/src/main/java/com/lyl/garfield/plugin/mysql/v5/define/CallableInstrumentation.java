@@ -16,7 +16,7 @@
  * Project repository: https://github.com/OpenSkywalking/skywalking
  */
 
-package com.lyl.garfield.plugin.jdbc.mysql.v5.define;
+package com.lyl.garfield.plugin.mysql.v5.define;
 
 import com.lyl.garfield.core.plugin.interceptor.ConstructorInterceptPoint;
 import com.lyl.garfield.core.plugin.interceptor.InstanceMethodsInterceptPoint;
@@ -28,23 +28,16 @@ import net.bytebuddy.matcher.ElementMatcher;
 import static net.bytebuddy.matcher.ElementMatchers.named;
 
 /**
- * {@link StatementInstrumentation} intercepts the following methods in the {@link
+ * {@link CallableInstrumentation} define that the mysql-2.x plugin intercepts the following methods in the {@link
  * 1. execute <br/>
  * 2. executeQuery <br/>
  * 3. executeUpdate <br/>
- * 4. executeLargeUpdate <br/>
- * 5. addBatch <br/>
- * 6. executeBatchInternal <br/>
- * 7. executeUpdateInternal <br/>
- * 8. executeQuery <br/>
- * 9. executeBatch <br/>
  *
  * @author zhangxin
  */
-public class StatementInstrumentation extends ClassInstanceMethodsEnhancePluginDefine {
-    private static final String STATEMENT_CLASS_NAME = "com.mysql.jdbc.StatementImpl";
-    private static final String SERVICE_METHOD_INTERCEPTOR = "com.lyl.garfield.plugin.jdbc.mysql.StatementExecuteMethodsInterceptor";
-    public static final String MYSQL6_STATEMENT_CLASS_NAME = "com.mysql.cj.jdbc.StatementImpl";
+public class CallableInstrumentation extends ClassInstanceMethodsEnhancePluginDefine {
+    private static final String ENHANCE_CLASS = "com.mysql.jdbc.CallableStatement";
+    private static final String SERVICE_METHOD_INTERCEPTOR = "com.lyl.garfield.plugin.mysql.v5.StatementExecuteMethodsInterceptor";
 
     @Override protected ConstructorInterceptPoint[] getConstructorsInterceptPoints() {
         return new ConstructorInterceptPoint[0];
@@ -56,13 +49,7 @@ public class StatementInstrumentation extends ClassInstanceMethodsEnhancePluginD
                 @Override public ElementMatcher<MethodDescription> getMethodsMatcher() {
                     return named("execute")
                         .or(named("executeQuery"))
-                        .or(named("executeUpdate"))
-                        .or(named("executeLargeUpdate"))
-                        .or(named("addBatch"))
-                        .or(named("executeBatchInternal"))
-                        .or(named("executeUpdateInternal"))
-                        .or(named("executeQuery"))
-                        .or(named("executeBatch"));
+                        .or(named("executeUpdate"));
                 }
 
                 @Override public String getMethodsInterceptor() {
@@ -77,6 +64,6 @@ public class StatementInstrumentation extends ClassInstanceMethodsEnhancePluginD
     }
 
     @Override protected ClassMatch enhanceClass() {
-        return MultiClassNameMatch.byMultiClassMatch(STATEMENT_CLASS_NAME, MYSQL6_STATEMENT_CLASS_NAME);
+        return MultiClassNameMatch.byMultiClassMatch(ENHANCE_CLASS, "com.mysql.jdbc.cj.CallableStatement");
     }
 }

@@ -16,7 +16,7 @@
  * Project repository: https://github.com/OpenSkywalking/skywalking
  */
 
-package com.lyl.garfield.plugin.jdbc.mysql.v5.define;
+package com.lyl.garfield.plugin.mysql.v5.define;
 
 import com.lyl.garfield.core.plugin.interceptor.ConstructorInterceptPoint;
 import com.lyl.garfield.core.plugin.interceptor.InstanceMethodsInterceptPoint;
@@ -53,7 +53,7 @@ public abstract class ConnectionInstrumentation extends ClassInstanceMethodsEnha
                 }
 
                 @Override public String getMethodsInterceptor() {
-                    return "com.lyl.garfield.plugin.jdbc.mysql.CreatePreparedStatementInterceptor";
+                    return "com.lyl.garfield.plugin.mysql.v5.CreatePreparedStatementInterceptor";
                 }
 
                 @Override public boolean isOverrideArgs() {
@@ -66,7 +66,7 @@ public abstract class ConnectionInstrumentation extends ClassInstanceMethodsEnha
                 }
 
                 @Override public String getMethodsInterceptor() {
-                    return "com.lyl.garfield.plugin.jdbc.mysql.CreateCallableStatementInterceptor";
+                    return "com.lyl.garfield.plugin.mysql.v5.CreateCallableStatementInterceptor";
                 }
 
                 @Override public boolean isOverrideArgs() {
@@ -79,7 +79,7 @@ public abstract class ConnectionInstrumentation extends ClassInstanceMethodsEnha
                 }
 
                 @Override public String getMethodsInterceptor() {
-                    return "com.lyl.garfield.plugin.jdbc.mysql.CreateStatementInterceptor";
+                    return "com.lyl.garfield.plugin.mysql.v5.CreateStatementInterceptor";
                 }
 
                 @Override public boolean isOverrideArgs() {

@@ -16,7 +16,8 @@
  * Project repository: https://github.com/OpenSkywalking/skywalking
  */
 
-package com.lyl.garfield.core.plugin.spring.cloud.feign.v11.define;
+package com.lyl.garfield.plugin.mysql.v5.define;
+
 
 import com.lyl.garfield.core.plugin.interceptor.ConstructorInterceptPoint;
 import com.lyl.garfield.core.plugin.interceptor.InstanceMethodsInterceptPoint;
@@ -25,43 +26,43 @@ import com.lyl.garfield.core.plugin.match.ClassMatch;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.matcher.ElementMatcher;
 
-import static com.lyl.garfield.core.plugin.match.NameMatch.byName;
 import static net.bytebuddy.matcher.ElementMatchers.named;
 
 /**
+ * {@link PreparedStatementInstrumentation} define that the mysql-2.x plugin intercepts the following methods in the
+ * com.mysql.cj.jdbc.PreparedStatement} class:
+ * 1. execute <br/>
+ * 2. executeQuery <br/>
+ * 3. executeUpdate <br/>
+ * 4. executeLargeUpdate <br/>
+ * 5. addBatch <br/>
+ *
  * @author zhangxin
  */
-public class NetflixFeignInstrumentation extends ClassInstanceMethodsEnhancePluginDefine {
-    /**
-     * Enhance class.
-     */
-    private static final String ENHANCE_CLASS = "org.springframework.cloud.netflix.feign.ribbon.LoadBalancerFeignClient";
+public class PreparedStatementInstrumentation extends ClassInstanceMethodsEnhancePluginDefine {
 
-    /**
-     * Intercept class.
-     */
-    private static final String INTERCEPT_CLASS = "com.lyl.garfield.plugin.feign.http.v9.DefaultHttpClientInterceptor";
+    private static final String PREPARED_STATEMENT_CLASS_NAME = "com.mysql.jdbc.PreparedStatement";
+    private static final String SERVICE_METHOD_INTERCEPTOR = "com.lyl.garfield.plugin.jdbc.mysql.StatementExecuteMethodsInterceptor";
+    public static final String MYSQL6_PREPARED_STATEMENT_CLASS_NAME = "com.mysql.cj.jdbc.PreparedStatement";
+    public static final String JDBC42_PREPARED_STATEMENT_CLASS_NAME = "com.mysql.jdbc.JDBC42PreparedStatement";
 
-    @Override
-    protected ClassMatch enhanceClass() {
-        return byName(ENHANCE_CLASS);
-    }
-
-    @Override
-    protected ConstructorInterceptPoint[] getConstructorsInterceptPoints() {
+    @Override protected final ConstructorInterceptPoint[] getConstructorsInterceptPoints() {
         return new ConstructorInterceptPoint[0];
     }
 
-    @Override
-    protected InstanceMethodsInterceptPoint[] getInstanceMethodsInterceptPoints() {
+    @Override protected final InstanceMethodsInterceptPoint[] getInstanceMethodsInterceptPoints() {
         return new InstanceMethodsInterceptPoint[] {
             new InstanceMethodsInterceptPoint() {
                 @Override public ElementMatcher<MethodDescription> getMethodsMatcher() {
-                    return named("execute");
+                    return named("execute")
+                        .or(named("executeQuery"))
+                        .or(named("executeUpdate"))
+                        .or(named("executeLargeUpdate"))
+                        .or(named("addBatch"));
                 }
 
                 @Override public String getMethodsInterceptor() {
-                    return INTERCEPT_CLASS;
+                    return SERVICE_METHOD_INTERCEPTOR;
                 }
 
                 @Override public boolean isOverrideArgs() {
@@ -69,5 +70,9 @@ public class NetflixFeignInstrumentation extends ClassInstanceMethodsEnhancePlug
                 }
             }
         };
+    }
+
+    @Override protected ClassMatch enhanceClass() {
+        return MultiClassNameMatch.byMultiClassMatch(PREPARED_STATEMENT_CLASS_NAME, MYSQL6_PREPARED_STATEMENT_CLASS_NAME, JDBC42_PREPARED_STATEMENT_CLASS_NAME);
     }
 }

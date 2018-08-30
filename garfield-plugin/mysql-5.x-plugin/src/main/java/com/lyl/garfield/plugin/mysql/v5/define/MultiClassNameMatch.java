@@ -16,7 +16,7 @@
  * Project repository: https://github.com/OpenSkywalking/skywalking
  */
 
-package com.lyl.garfield.plugin.jdbc.mysql.v5.define;
+package com.lyl.garfield.plugin.mysql.v5.define;
 
 import com.lyl.garfield.core.plugin.match.ClassMatch;
 import com.lyl.garfield.core.plugin.match.IndirectMatch;

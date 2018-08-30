@@ -1,4 +1,4 @@
-package com.lyl.garfield.plugin.druid.v1;/*
+package com.lyl.garfield.plugin.aliyuncs.v2;/*
  * Copyright 2017, OpenSkywalking Organization All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,35 +16,28 @@ package com.lyl.garfield.plugin.druid.v1;/*
  * Project repository: https://github.com/OpenSkywalking/skywalking
  */
 
-import com.aliyun.oss.internal.OSSObjectOperation;
 import com.aliyuncs.http.HttpRequest;
 import com.aliyuncs.http.HttpResponse;
 import com.lyl.garfield.api.component.ComponentsDefine;
 import com.lyl.garfield.api.trace.AbstractSpan;
-import com.lyl.garfield.api.trace.LocalSpan;
 import com.lyl.garfield.api.trace.SpanLayer;
 import com.lyl.garfield.api.trace.tag.Tags;
 import com.lyl.garfield.core.context.ContextManager;
-import com.lyl.garfield.core.plugin.interceptor.enhance.EnhancedInstance;
-import com.lyl.garfield.core.plugin.interceptor.enhance.InstanceMethodsAroundInterceptor;
 import com.lyl.garfield.core.plugin.interceptor.enhance.MethodInterceptResult;
+import com.lyl.garfield.core.plugin.interceptor.enhance.StaticMethodsAroundInterceptor;
 
 import java.lang.reflect.Method;
 
-public class AliyuncsMetadataInterceptor implements InstanceMethodsAroundInterceptor {
+public class AliyuncsResponseInterceptor implements StaticMethodsAroundInterceptor {
 
-    public static final String ALIYUN_METADATA_OPERATION_NAME_PREFIX = "Aliyun/metadata";
-
-    //如果错误码等于NoSuchKey 则忽略这个异常
-    public static final String ALIYUN_METADATA_ERROR_CODE = "NoSuchKey";
-
+    public static final String ALIYUN_OPERATION_NAME_PREFIX = "Aliyun";
 
     @Override
-    public void beforeMethod(EnhancedInstance objInst, Method method, Object[] allArguments, Class<?>[] argumentsTypes, MethodInterceptResult result) throws Throwable {
+    public void beforeMethod(Class clazz, Method method, Object[] allArguments, Class<?>[] parameterTypes, MethodInterceptResult result) {
         HttpRequest request = (HttpRequest) allArguments[0];
-        OSSObjectOperation operation = (OSSObjectOperation) objInst;
-        String domain = operation.getEndpoint().toString();
-        AbstractSpan span = ContextManager.createExitSpan(ALIYUN_METADATA_OPERATION_NAME_PREFIX, domain);
+        String url = request.getUrl();
+        String domain = url.substring(0, url.indexOf("?") - 1);
+        AbstractSpan span = ContextManager.createExitSpan(ALIYUN_OPERATION_NAME_PREFIX, domain);
         span.setComponent(ComponentsDefine.ALIYUN_OSS);
         Tags.URL.set(span, domain);
         Tags.HTTP.METHOD.set(span, request.getMethod().name());
@@ -52,20 +45,23 @@ public class AliyuncsMetadataInterceptor implements InstanceMethodsAroundInterce
     }
 
     @Override
-    public Object afterMethod(EnhancedInstance objInst, Method method, Object[] allArguments, Class<?>[] argumentsTypes, Object ret) throws Throwable {
-        int statusCode = 500;
-        if (ret != null){
-            HttpResponse httpResponse = (HttpResponse) ret;
-            statusCode = httpResponse.getStatus();
+    public Object afterMethod(Class clazz, Method method, Object[] allArguments, Class<?>[] parameterTypes, Object ret) {
+        AbstractSpan span = ContextManager.activeSpan();
+        if (ret == null){
+            return ret;
         }
-        LocalSpan span = (LocalSpan) ContextManager.activeSpan();
+        HttpResponse httpResponse = (HttpResponse) ret;
+        int statusCode = httpResponse.getStatus();
+        if (statusCode >= 400){
+            span.errorOccurred();
+        }
         Tags.STATUS_CODE.set(span, Integer.toString(statusCode));
         ContextManager.stopSpan();
         return ret;
     }
 
     @Override
-    public void handleMethodException(EnhancedInstance objInst, Method method, Object[] allArguments, Class<?>[] argumentsTypes, Throwable t) {
+    public void handleMethodException(Class clazz, Method method, Object[] allArguments, Class<?>[] parameterTypes, Throwable t) {
         AbstractSpan activeSpan = ContextManager.activeSpan();
         activeSpan.errorOccurred();
         activeSpan.log(t);

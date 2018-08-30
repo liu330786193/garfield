@@ -16,7 +16,7 @@
  * Project repository: https://github.com/OpenSkywalking/skywalking
  */
 
-package com.lyl.garfield.plugin.jdbc.mysql.v5.define;
+package com.lyl.garfield.plugin.spring.cloud.feign.v11.define;
 
 import com.lyl.garfield.core.plugin.interceptor.ConstructorInterceptPoint;
 import com.lyl.garfield.core.plugin.interceptor.InstanceMethodsInterceptPoint;
@@ -25,35 +25,43 @@ import com.lyl.garfield.core.plugin.match.ClassMatch;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.matcher.ElementMatcher;
 
+import static com.lyl.garfield.core.plugin.match.NameMatch.byName;
 import static net.bytebuddy.matcher.ElementMatchers.named;
 
 /**
- * {@link CallableInstrumentation} define that the mysql-2.x plugin intercepts the following methods in the {@link
- * 1. execute <br/>
- * 2. executeQuery <br/>
- * 3. executeUpdate <br/>
- *
  * @author zhangxin
  */
-public class CallableInstrumentation extends ClassInstanceMethodsEnhancePluginDefine {
-    private static final String ENHANCE_CLASS = "com.mysql.jdbc.CallableStatement";
-    private static final String SERVICE_METHOD_INTERCEPTOR = "com.lyl.garfield.plugin.jdbc.mysql.StatementExecuteMethodsInterceptor";
+public class NetflixFeignInstrumentation extends ClassInstanceMethodsEnhancePluginDefine {
+    /**
+     * Enhance class.
+     */
+    private static final String ENHANCE_CLASS = "org.springframework.cloud.netflix.feign.ribbon.LoadBalancerFeignClient";
 
-    @Override protected ConstructorInterceptPoint[] getConstructorsInterceptPoints() {
+    /**
+     * Intercept class.
+     */
+    private static final String INTERCEPT_CLASS = "com.lyl.garfield.plugin.feign.http.v9.DefaultHttpClientInterceptor";
+
+    @Override
+    protected ClassMatch enhanceClass() {
+        return byName(ENHANCE_CLASS);
+    }
+
+    @Override
+    protected ConstructorInterceptPoint[] getConstructorsInterceptPoints() {
         return new ConstructorInterceptPoint[0];
     }
 
-    @Override protected InstanceMethodsInterceptPoint[] getInstanceMethodsInterceptPoints() {
+    @Override
+    protected InstanceMethodsInterceptPoint[] getInstanceMethodsInterceptPoints() {
         return new InstanceMethodsInterceptPoint[] {
             new InstanceMethodsInterceptPoint() {
                 @Override public ElementMatcher<MethodDescription> getMethodsMatcher() {
-                    return named("execute")
-                        .or(named("executeQuery"))
-                        .or(named("executeUpdate"));
+                    return named("execute");
                 }
 
                 @Override public String getMethodsInterceptor() {
-                    return SERVICE_METHOD_INTERCEPTOR;
+                    return INTERCEPT_CLASS;
                 }
 
                 @Override public boolean isOverrideArgs() {
@@ -61,9 +69,5 @@ public class CallableInstrumentation extends ClassInstanceMethodsEnhancePluginDe
                 }
             }
         };
-    }
-
-    @Override protected ClassMatch enhanceClass() {
-        return MultiClassNameMatch.byMultiClassMatch(ENHANCE_CLASS, "com.mysql.jdbc.cj.CallableStatement");
     }
 }

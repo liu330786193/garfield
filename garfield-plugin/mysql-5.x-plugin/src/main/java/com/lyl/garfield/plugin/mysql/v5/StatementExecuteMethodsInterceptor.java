@@ -16,7 +16,7 @@
  * Project repository: https://github.com/OpenSkywalking/skywalking
  */
 
-package com.lyl.garfield.plugin.jdbc.mysql.v5;
+package com.lyl.garfield.plugin.mysql.v5;
 
 import com.lyl.garfield.api.trace.AbstractSpan;
 import com.lyl.garfield.api.trace.SpanLayer;

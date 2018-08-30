@@ -16,8 +16,7 @@
  * Project repository: https://github.com/OpenSkywalking/skywalking
  */
 
-package com.lyl.garfield.plugin.jdbc.mysql.v5.define;
-
+package com.lyl.garfield.plugin.mysql.v5.define;
 
 import com.lyl.garfield.core.plugin.interceptor.ConstructorInterceptPoint;
 import com.lyl.garfield.core.plugin.interceptor.InstanceMethodsInterceptPoint;
@@ -29,28 +28,29 @@ import net.bytebuddy.matcher.ElementMatcher;
 import static net.bytebuddy.matcher.ElementMatchers.named;
 
 /**
- * {@link PreparedStatementInstrumentation} define that the mysql-2.x plugin intercepts the following methods in the
- * com.mysql.cj.jdbc.PreparedStatement} class:
+ * {@link StatementInstrumentation} intercepts the following methods in the {@link
  * 1. execute <br/>
  * 2. executeQuery <br/>
  * 3. executeUpdate <br/>
  * 4. executeLargeUpdate <br/>
  * 5. addBatch <br/>
+ * 6. executeBatchInternal <br/>
+ * 7. executeUpdateInternal <br/>
+ * 8. executeQuery <br/>
+ * 9. executeBatch <br/>
  *
  * @author zhangxin
  */
-public class PreparedStatementInstrumentation extends ClassInstanceMethodsEnhancePluginDefine {
+public class StatementInstrumentation extends ClassInstanceMethodsEnhancePluginDefine {
+    private static final String STATEMENT_CLASS_NAME = "com.mysql.jdbc.StatementImpl";
+    private static final String SERVICE_METHOD_INTERCEPTOR = "com.lyl.garfield.plugin.mysql.v5.StatementExecuteMethodsInterceptor";
+    public static final String MYSQL6_STATEMENT_CLASS_NAME = "com.mysql.cj.jdbc.StatementImpl";
 
-    private static final String PREPARED_STATEMENT_CLASS_NAME = "com.mysql.jdbc.PreparedStatement";
-    private static final String SERVICE_METHOD_INTERCEPTOR = "com.lyl.garfield.plugin.jdbc.mysql.StatementExecuteMethodsInterceptor";
-    public static final String MYSQL6_PREPARED_STATEMENT_CLASS_NAME = "com.mysql.cj.jdbc.PreparedStatement";
-    public static final String JDBC42_PREPARED_STATEMENT_CLASS_NAME = "com.mysql.jdbc.JDBC42PreparedStatement";
-
-    @Override protected final ConstructorInterceptPoint[] getConstructorsInterceptPoints() {
+    @Override protected ConstructorInterceptPoint[] getConstructorsInterceptPoints() {
         return new ConstructorInterceptPoint[0];
     }
 
-    @Override protected final InstanceMethodsInterceptPoint[] getInstanceMethodsInterceptPoints() {
+    @Override protected InstanceMethodsInterceptPoint[] getInstanceMethodsInterceptPoints() {
         return new InstanceMethodsInterceptPoint[] {
             new InstanceMethodsInterceptPoint() {
                 @Override public ElementMatcher<MethodDescription> getMethodsMatcher() {
@@ -58,7 +58,11 @@ public class PreparedStatementInstrumentation extends ClassInstanceMethodsEnhanc
                         .or(named("executeQuery"))
                         .or(named("executeUpdate"))
                         .or(named("executeLargeUpdate"))
-                        .or(named("addBatch"));
+                        .or(named("addBatch"))
+                        .or(named("executeBatchInternal"))
+                        .or(named("executeUpdateInternal"))
+                        .or(named("executeQuery"))
+                        .or(named("executeBatch"));
                 }
 
                 @Override public String getMethodsInterceptor() {
@@ -73,6 +77,6 @@ public class PreparedStatementInstrumentation extends ClassInstanceMethodsEnhanc
     }
 
     @Override protected ClassMatch enhanceClass() {
-        return MultiClassNameMatch.byMultiClassMatch(PREPARED_STATEMENT_CLASS_NAME, MYSQL6_PREPARED_STATEMENT_CLASS_NAME, JDBC42_PREPARED_STATEMENT_CLASS_NAME);
+        return MultiClassNameMatch.byMultiClassMatch(STATEMENT_CLASS_NAME, MYSQL6_STATEMENT_CLASS_NAME);
     }
 }

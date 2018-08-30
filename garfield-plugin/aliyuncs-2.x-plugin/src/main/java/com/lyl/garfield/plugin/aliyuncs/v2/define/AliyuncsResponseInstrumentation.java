@@ -1,4 +1,4 @@
-package com.lyl.garfield.plugin.druid.v1.define;/*
+package com.lyl.garfield.plugin.aliyuncs.v2.define;/*
  * Copyright 2017, OpenSkywalking Organization All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,7 +37,7 @@ public class AliyuncsResponseInstrumentation extends ClassStaticMethodsEnhancePl
 
     private static final String RESPONSE_METHOD = "getResponse";
 
-    private static final String RESPONSE_INTERCEPT_CLASS = "com.lyl.garfield.plugin.aliyuncs.v4.AliyuncsResponseInterceptor";
+    private static final String RESPONSE_INTERCEPT_CLASS = "com.lyl.garfield.plugin.aliyuncs.v2.AliyuncsResponseInterceptor";
 
 
     @Override

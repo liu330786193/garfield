@@ -72,10 +72,6 @@ public class SnifferConfigInitializer {
             throw new ExceptionInInitializerError("agent.application_id is missing.");
         }
 
-        if (StringUtil.isEmpty(Config.Kafka.BOOTSTRAP_SERVERS)) {
-            throw new ExceptionInInitializerError("kafka.bootstrap_servers is missing.");
-        }
-
     }
 
     /**
