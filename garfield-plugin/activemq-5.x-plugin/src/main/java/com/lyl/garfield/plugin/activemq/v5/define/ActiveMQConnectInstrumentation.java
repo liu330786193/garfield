@@ -1,9 +1,10 @@
 package com.lyl.garfield.plugin.activemq.v5.define;
 
-import core.plugin.interceptor.ConstructorInterceptPoint;
-import core.plugin.interceptor.InstanceMethodsInterceptPoint;
-import core.plugin.interceptor.enhance.ClassInstanceMethodsEnhancePluginDefine;
-import core.plugin.match.ClassMatch;
+
+import com.lyl.garfield.core.plugin.interceptor.ConstructorInterceptPoint;
+import com.lyl.garfield.core.plugin.interceptor.InstanceMethodsInterceptPoint;
+import com.lyl.garfield.core.plugin.interceptor.enhance.ClassInstanceMethodsEnhancePluginDefine;
+import com.lyl.garfield.core.plugin.match.ClassMatch;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.matcher.ElementMatcher;
 

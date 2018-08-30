@@ -1,11 +1,11 @@
-package com.lyl.garfield.core.agent;
+package com.lyl.garfield.agent;
 
 
-import core.boot.ServiceManager;
-import core.conf.SnifferConfigInitializer;
-import core.logging.api.ILog;
-import core.logging.api.LogManager;
-import core.plugin.*;
+import com.lyl.garfield.core.boot.ServiceManager;
+import com.lyl.garfield.core.conf.SnifferConfigInitializer;
+import com.lyl.garfield.core.logging.api.ILog;
+import com.lyl.garfield.core.logging.api.LogManager;
+import com.lyl.garfield.core.plugin.*;
 import net.bytebuddy.agent.builder.AgentBuilder;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.DynamicType;

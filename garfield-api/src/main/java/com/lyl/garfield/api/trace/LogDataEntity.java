@@ -18,6 +18,8 @@
 
 package com.lyl.garfield.api.trace;
 
+import com.lyl.garfield.api.util.KeyValuePair;
+
 import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;

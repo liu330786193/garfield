@@ -18,6 +18,8 @@
 
 package com.lyl.garfield.api.trace;
 
+import com.lyl.garfield.api.component.Component;
+
 /**
  * The <code>EntrySpan</code> represents a jvm provider point, such as tomcat server entrance.
  *
