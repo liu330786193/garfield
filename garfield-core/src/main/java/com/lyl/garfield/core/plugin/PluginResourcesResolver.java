@@ -19,9 +19,9 @@
 package com.lyl.garfield.core.plugin;
 
 
-import com.timevale.cat.core.logging.api.ILog;
-import com.timevale.cat.core.logging.api.LogManager;
-import com.timevale.cat.core.plugin.loader.AgentClassLoader;
+import com.lyl.garfield.core.logging.api.ILog;
+import com.lyl.garfield.core.logging.api.LogManager;
+import com.lyl.garfield.core.plugin.loader.AgentClassLoader;
 
 import java.io.IOException;
 import java.net.URL;
@@ -42,7 +42,7 @@ public class PluginResourcesResolver {
         List<URL> cfgUrlPaths = new ArrayList<URL>();
         Enumeration<URL> urls;
         try {
-            urls = AgentClassLoader.getDefault().getResources("cat-plugin.def");
+            urls = AgentClassLoader.getDefault().getResources("garfield-plugin.def");
 
             while (urls.hasMoreElements()) {
                 URL pluginUrl = urls.nextElement();

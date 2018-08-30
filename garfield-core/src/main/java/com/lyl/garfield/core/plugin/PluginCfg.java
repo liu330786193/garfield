@@ -19,7 +19,7 @@
 package com.lyl.garfield.core.plugin;
 
 
-import com.timevale.cat.core.plugin.exception.IllegalPluginDefineException;
+import com.lyl.garfield.core.plugin.exception.IllegalPluginDefineException;
 
 import java.io.BufferedReader;
 import java.io.IOException;

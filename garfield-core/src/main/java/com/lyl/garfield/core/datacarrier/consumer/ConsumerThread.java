@@ -18,8 +18,8 @@
 
 package com.lyl.garfield.core.datacarrier.consumer;
 
-import com.timevale.cat.core.conf.Config;
-import com.timevale.cat.core.datacarrier.buffer.Buffer;
+import com.lyl.garfield.core.conf.Config;
+import com.lyl.garfield.core.datacarrier.buffer.Buffer;
 
 import java.util.LinkedList;
 import java.util.List;

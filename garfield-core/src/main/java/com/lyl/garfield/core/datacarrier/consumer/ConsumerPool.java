@@ -18,8 +18,8 @@
 
 package com.lyl.garfield.core.datacarrier.consumer;
 
-import com.timevale.cat.core.datacarrier.buffer.Buffer;
-import com.timevale.cat.core.datacarrier.buffer.Channels;
+import com.lyl.garfield.core.datacarrier.buffer.Buffer;
+import com.lyl.garfield.core.datacarrier.buffer.Channels;
 
 import java.util.ArrayList;
 import java.util.concurrent.locks.ReentrantLock;

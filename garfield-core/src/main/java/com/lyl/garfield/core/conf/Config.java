@@ -18,8 +18,8 @@
 
 package com.lyl.garfield.core.conf;
 
-import com.timevale.cat.core.kafka.ProtobufSerializer;
-import com.timevale.cat.core.logging.core.LogLevel;
+import com.lyl.garfield.core.kafka.ProtobufSerializer;
+import com.lyl.garfield.core.logging.core.LogLevel;
 import org.apache.kafka.common.serialization.StringSerializer;
 
 /**

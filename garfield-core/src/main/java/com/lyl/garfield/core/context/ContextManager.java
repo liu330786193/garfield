@@ -18,17 +18,17 @@
 
 package com.lyl.garfield.core.context;
 
-import com.timevale.cat.api.trace.AbstractSpan;
-import com.timevale.cat.api.trace.DictionaryUtil;
-import com.timevale.cat.core.boot.BootService;
-import com.timevale.cat.core.boot.ServiceManager;
-import com.timevale.cat.core.conf.Config;
-import com.timevale.cat.core.context.trace.TraceSegment;
-import com.timevale.cat.core.logging.api.ILog;
-import com.timevale.cat.core.logging.api.LogManager;
-import com.timevale.cat.core.sampling.SamplingService;
-import com.timevale.cat.core.utils.NetworkSingleton;
-import com.timevale.cat.core.utils.StringUtil;
+import com.lyl.garfield.api.trace.AbstractSpan;
+import com.lyl.garfield.api.trace.DictionaryUtil;
+import com.lyl.garfield.core.boot.BootService;
+import com.lyl.garfield.core.boot.ServiceManager;
+import com.lyl.garfield.core.conf.Config;
+import com.lyl.garfield.core.context.trace.TraceSegment;
+import com.lyl.garfield.core.logging.api.ILog;
+import com.lyl.garfield.core.logging.api.LogManager;
+import com.lyl.garfield.core.sampling.SamplingService;
+import com.lyl.garfield.core.utils.NetworkSingleton;
+import com.lyl.garfield.core.utils.StringUtil;
 
 /**
  * {@link ContextManager} controls the whole context of {@link TraceSegment}. Any {@link TraceSegment} relates to

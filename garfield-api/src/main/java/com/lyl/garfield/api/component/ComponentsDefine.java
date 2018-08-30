@@ -25,7 +25,7 @@ package com.lyl.garfield.api.component;
  */
 public class ComponentsDefine {
 
-    public static final OfficialComponent tomcat = new OfficialComponent(1, "tomcat");
+    public static final OfficialComponent TOMCAT = new OfficialComponent(1, "tomcat");
 
     public static final OfficialComponent HTTPCLIENT = new OfficialComponent(2, "HttpClient");
 
@@ -53,7 +53,7 @@ public class ComponentsDefine {
 
     public ComponentsDefine() {
         components = new String[10];
-        addComponent(tomcat);
+        addComponent(TOMCAT);
         addComponent(HTTPCLIENT);
         addComponent(MYSQL);
         addComponent(ORACLE);

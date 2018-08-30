@@ -1,6 +1,6 @@
 package com.lyl.garfield.core.kafka;
 
-import com.timevale.cat.api.conf.TopicConfig;
+import com.lyl.garfield.api.conf.TopicConfig;
 import io.protostuff.ProtobufIOUtil;
 import io.protostuff.Schema;
 import io.protostuff.runtime.RuntimeSchema;

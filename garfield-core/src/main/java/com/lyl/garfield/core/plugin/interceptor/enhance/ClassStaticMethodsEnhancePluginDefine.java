@@ -18,8 +18,8 @@
 
 package com.lyl.garfield.core.plugin.interceptor.enhance;
 
-import com.timevale.cat.core.plugin.interceptor.ConstructorInterceptPoint;
-import com.timevale.cat.core.plugin.interceptor.InstanceMethodsInterceptPoint;
+import com.lyl.garfield.core.plugin.interceptor.ConstructorInterceptPoint;
+import com.lyl.garfield.core.plugin.interceptor.InstanceMethodsInterceptPoint;
 
 /**
  * Plugins, which only need enhance class static methods. Actually, inherit from {@link

@@ -19,21 +19,21 @@
 package com.lyl.garfield.core.remote;
 
 
-import com.timevale.cat.core.boot.BootService;
-import com.timevale.cat.core.context.TracingContext;
-import com.timevale.cat.core.context.TracingContextListener;
-import com.timevale.cat.core.context.trace.TraceSegment;
-import com.timevale.cat.core.datacarrier.DataCarrier;
-import com.timevale.cat.core.datacarrier.buffer.BufferStrategy;
-import com.timevale.cat.core.datacarrier.consumer.IConsumer;
-import com.timevale.cat.core.kafka.KafkaSender;
-import com.timevale.cat.core.logging.api.ILog;
-import com.timevale.cat.core.logging.api.LogManager;
+import com.lyl.garfield.core.boot.BootService;
+import com.lyl.garfield.core.context.TracingContext;
+import com.lyl.garfield.core.context.TracingContextListener;
+import com.lyl.garfield.core.context.trace.TraceSegment;
+import com.lyl.garfield.core.datacarrier.DataCarrier;
+import com.lyl.garfield.core.datacarrier.buffer.BufferStrategy;
+import com.lyl.garfield.core.datacarrier.consumer.IConsumer;
+import com.lyl.garfield.core.kafka.KafkaSender;
+import com.lyl.garfield.core.logging.api.ILog;
+import com.lyl.garfield.core.logging.api.LogManager;
 
 import java.util.List;
 
-import static com.timevale.cat.core.conf.Config.Buffer.BUFFER_SIZE;
-import static com.timevale.cat.core.conf.Config.Buffer.CHANNEL_SIZE;
+import static com.lyl.garfield.core.conf.Config.Buffer.BUFFER_SIZE;
+import static com.lyl.garfield.core.conf.Config.Buffer.CHANNEL_SIZE;
 
 /**
  * @author wusheng

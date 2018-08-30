@@ -1,6 +1,6 @@
 package com.lyl.garfield.core.jvm.bean;
 
-import com.timevale.cat.core.utils.IPUtils;
+import com.lyl.garfield.core.utils.IPUtils;
 
 import java.lang.management.ClassLoadingMXBean;
 import java.lang.management.CompilationMXBean;

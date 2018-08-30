@@ -18,8 +18,8 @@
 
 package com.lyl.garfield.core.context;
 
-import com.timevale.cat.api.trace.AbstractSpan;
-import com.timevale.cat.api.trace.NoopSpan;
+import com.lyl.garfield.api.trace.AbstractSpan;
+import com.lyl.garfield.api.trace.NoopSpan;
 
 import java.util.LinkedList;
 import java.util.List;

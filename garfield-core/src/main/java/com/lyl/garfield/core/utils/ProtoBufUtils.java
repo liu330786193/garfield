@@ -1,6 +1,6 @@
 package com.lyl.garfield.core.utils;
 
-import com.timevale.cat.api.trace.DefaultTraceSegment;
+import com.lyl.garfield.api.trace.DefaultTraceSegment;
 import io.protostuff.LinkedBuffer;
 import io.protostuff.ProtobufIOUtil;
 import io.protostuff.Schema;

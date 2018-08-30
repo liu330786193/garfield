@@ -19,7 +19,7 @@
 package com.lyl.garfield.core.context;
 
 
-import com.timevale.cat.api.trace.AbstractSpan;
+import com.lyl.garfield.api.trace.AbstractSpan;
 
 /**
  * The <code>AbstractTracerContext</code> represents the tracer context manager.

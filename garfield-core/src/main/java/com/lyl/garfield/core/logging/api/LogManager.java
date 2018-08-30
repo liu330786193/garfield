@@ -18,7 +18,7 @@
 
 package com.lyl.garfield.core.logging.api;
 
-import com.timevale.cat.core.logging.core.EasyLogResolver;
+import com.lyl.garfield.core.logging.core.EasyLogResolver;
 
 /**
  * LogManager is the {@link LogResolver} implementation manager. By using {@link LogResolver}, {@link

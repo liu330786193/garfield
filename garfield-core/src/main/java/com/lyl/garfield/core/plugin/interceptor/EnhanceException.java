@@ -18,7 +18,7 @@
 
 package com.lyl.garfield.core.plugin.interceptor;
 
-import com.timevale.cat.core.plugin.PluginException;
+import com.lyl.garfield.core.plugin.PluginException;
 
 public class EnhanceException extends PluginException {
     private static final long serialVersionUID = -2234782755784217255L;

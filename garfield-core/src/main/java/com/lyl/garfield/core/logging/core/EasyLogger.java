@@ -18,10 +18,10 @@
 
 package com.lyl.garfield.core.logging.core;
 
-import com.timevale.cat.core.conf.Config;
-import com.timevale.cat.core.conf.Constants;
-import com.timevale.cat.core.logging.api.ILog;
-import com.timevale.cat.core.utils.StringUtil;
+import com.lyl.garfield.core.conf.Config;
+import com.lyl.garfield.core.conf.Constants;
+import com.lyl.garfield.core.logging.api.ILog;
+import com.lyl.garfield.core.utils.StringUtil;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

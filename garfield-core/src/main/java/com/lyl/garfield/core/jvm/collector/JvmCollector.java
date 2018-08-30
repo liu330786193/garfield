@@ -1,19 +1,19 @@
 package com.lyl.garfield.core.jvm.collector;
 
 
-import com.timevale.cat.api.jvm.JvmDTO;
-import com.timevale.cat.core.conf.Config;
-import com.timevale.cat.core.jvm.bean.JVMGC;
-import com.timevale.cat.core.jvm.bean.JVMInfo;
-import com.timevale.cat.core.jvm.bean.JVMMemory;
-import com.timevale.cat.core.jvm.bean.JVMThread;
-import com.timevale.cat.core.utils.IPUtils;
+import com.lyl.garfield.api.jvm.JvmDTO;
+import com.lyl.garfield.core.conf.Config;
+import com.lyl.garfield.core.jvm.bean.JVMGC;
+import com.lyl.garfield.core.jvm.bean.JVMInfo;
+import com.lyl.garfield.core.jvm.bean.JVMMemory;
+import com.lyl.garfield.core.jvm.bean.JVMThread;
+import com.lyl.garfield.core.utils.IPUtils;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import static com.timevale.cat.core.constants.CatAgentConstants.*;
-import static com.timevale.cat.core.constants.CatAgentItemConstants.*;
+import static com.lyl.garfield.core.constants.CatAgentConstants.*;
+import static com.lyl.garfield.core.constants.CatAgentItemConstants.*;
 
 /**
  * jvm信息采集(内存,GC,线程)

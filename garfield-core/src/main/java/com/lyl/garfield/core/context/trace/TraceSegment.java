@@ -1,12 +1,12 @@
 package com.lyl.garfield.core.context.trace;
 
-import com.timevale.cat.api.trace.DefaultTraceSegment;
-import com.timevale.cat.api.trace.DefaultTraceSegmentRef;
-import com.timevale.cat.api.trace.DefaultTracingSpan;
-import com.timevale.cat.core.conf.Config;
-import com.timevale.cat.core.context.ids.GlobalIdGenerator;
-import com.timevale.cat.core.context.ids.NewDistributedTraceId;
-import com.timevale.cat.core.utils.NetworkSingleton;
+import com.lyl.garfield.api.trace.DefaultTraceSegment;
+import com.lyl.garfield.api.trace.DefaultTraceSegmentRef;
+import com.lyl.garfield.api.trace.DefaultTracingSpan;
+import com.lyl.garfield.core.conf.Config;
+import com.lyl.garfield.core.context.ids.GlobalIdGenerator;
+import com.lyl.garfield.core.context.ids.NewDistributedTraceId;
+import com.lyl.garfield.core.utils.NetworkSingleton;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

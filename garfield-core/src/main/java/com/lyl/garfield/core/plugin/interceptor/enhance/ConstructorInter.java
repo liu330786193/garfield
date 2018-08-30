@@ -18,10 +18,10 @@
 
 package com.lyl.garfield.core.plugin.interceptor.enhance;
 
-import com.timevale.cat.core.logging.api.ILog;
-import com.timevale.cat.core.logging.api.LogManager;
-import com.timevale.cat.core.plugin.PluginException;
-import com.timevale.cat.core.plugin.loader.InterceptorInstanceLoader;
+import com.lyl.garfield.core.logging.api.ILog;
+import com.lyl.garfield.core.logging.api.LogManager;
+import com.lyl.garfield.core.plugin.PluginException;
+import com.lyl.garfield.core.plugin.loader.InterceptorInstanceLoader;
 import net.bytebuddy.implementation.bind.annotation.AllArguments;
 import net.bytebuddy.implementation.bind.annotation.RuntimeType;
 import net.bytebuddy.implementation.bind.annotation.This;

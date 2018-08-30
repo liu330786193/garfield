@@ -1,0 +1,5 @@
+toolkit-trace=com.lyl.garfield.plugin.toolkit.trace.activation.ActiveSpanTagActivation
+toolkit-trace=com.lyl.garfield.plugin.toolkit.trace.activation.TraceAnnotationActivation
+toolkit-trace=com.lyl.garfield.plugin.toolkit.trace.activation.TraceContextActivation
+toolkit-trace=com.lyl.garfield.plugin.toolkit.trace.activation.TraceAnnotationStaticActivation
+toolkit-trace=com.lyl.garfield.plugin.toolkit.trace.activation.ActiveSpanLogActivation

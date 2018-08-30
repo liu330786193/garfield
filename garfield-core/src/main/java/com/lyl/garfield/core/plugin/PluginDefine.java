@@ -19,8 +19,8 @@
 package com.lyl.garfield.core.plugin;
 
 
-import com.timevale.cat.core.plugin.exception.IllegalPluginDefineException;
-import com.timevale.cat.core.utils.StringUtil;
+import com.lyl.garfield.core.plugin.exception.IllegalPluginDefineException;
+import com.lyl.garfield.core.utils.StringUtil;
 
 public class PluginDefine {
     /**

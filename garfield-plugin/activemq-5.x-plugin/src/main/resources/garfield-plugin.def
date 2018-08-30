@@ -1,0 +1,4 @@
+activemq-5.x=com.lyl.garfield.plugin.activemq.v5.define.ActiveMQMessageProducerInstrumentation
+activemq-5.x=com.lyl.garfield.plugin.activemq.v5.define.ActiveMQMessageConsumerInstrumentation
+activemq-5.x=com.lyl.garfield.plugin.activemq.v5.define.ActiveMQConnectInstrumentation
+activemq-5.x=com.lyl.garfield.plugin.activemq.v5.define.ActiveMQConnectionInstrumentation

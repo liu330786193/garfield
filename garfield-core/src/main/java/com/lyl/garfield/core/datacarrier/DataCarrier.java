@@ -19,12 +19,12 @@
 package com.lyl.garfield.core.datacarrier;
 
 
-import com.timevale.cat.core.datacarrier.buffer.BufferStrategy;
-import com.timevale.cat.core.datacarrier.buffer.Channels;
-import com.timevale.cat.core.datacarrier.consumer.ConsumerPool;
-import com.timevale.cat.core.datacarrier.consumer.IConsumer;
-import com.timevale.cat.core.datacarrier.partition.IDataPartitioner;
-import com.timevale.cat.core.datacarrier.partition.SimpleRollingPartitioner;
+import com.lyl.garfield.core.datacarrier.buffer.BufferStrategy;
+import com.lyl.garfield.core.datacarrier.buffer.Channels;
+import com.lyl.garfield.core.datacarrier.consumer.ConsumerPool;
+import com.lyl.garfield.core.datacarrier.consumer.IConsumer;
+import com.lyl.garfield.core.datacarrier.partition.IDataPartitioner;
+import com.lyl.garfield.core.datacarrier.partition.SimpleRollingPartitioner;
 
 /**
  * DataCarrier main class.

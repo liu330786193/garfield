@@ -1,9 +1,9 @@
 package com.lyl.garfield.core.context.trace;
 
-import com.timevale.cat.api.trace.DefaultTraceSegmentRef;
-import com.timevale.cat.core.context.ContextCarrier;
-import com.timevale.cat.core.context.ContextSnapshot;
-import com.timevale.cat.core.utils.NetworkSingleton;
+import com.lyl.garfield.api.trace.DefaultTraceSegmentRef;
+import com.lyl.garfield.core.context.ContextCarrier;
+import com.lyl.garfield.core.context.ContextSnapshot;
+import com.lyl.garfield.core.utils.NetworkSingleton;
 
 public class TraceSegmentRef extends DefaultTraceSegmentRef {
 

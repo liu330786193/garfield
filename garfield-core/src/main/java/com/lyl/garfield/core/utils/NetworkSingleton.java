@@ -1,6 +1,6 @@
 package com.lyl.garfield.core.utils;
 
-import com.timevale.cat.core.conf.Config;
+import com.lyl.garfield.core.conf.Config;
 
 import java.util.Collection;
 

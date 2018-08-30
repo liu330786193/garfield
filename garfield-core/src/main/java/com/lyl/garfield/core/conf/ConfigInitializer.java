@@ -1,7 +1,7 @@
 package com.lyl.garfield.core.conf;
 
 
-import com.timevale.cat.core.utils.StringUtil;
+import com.lyl.garfield.core.utils.StringUtil;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;

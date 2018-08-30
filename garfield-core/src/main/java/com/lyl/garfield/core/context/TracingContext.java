@@ -18,13 +18,13 @@
 
 package com.lyl.garfield.core.context;
 
-import com.timevale.cat.api.trace.*;
-import com.timevale.cat.core.boot.ServiceManager;
-import com.timevale.cat.core.conf.Config;
-import com.timevale.cat.core.context.ids.ID;
-import com.timevale.cat.core.context.trace.TraceSegment;
-import com.timevale.cat.core.context.trace.TraceSegmentRef;
-import com.timevale.cat.core.sampling.SamplingService;
+import com.lyl.garfield.api.trace.*;
+import com.lyl.garfield.core.boot.ServiceManager;
+import com.lyl.garfield.core.conf.Config;
+import com.lyl.garfield.core.context.ids.ID;
+import com.lyl.garfield.core.context.trace.TraceSegment;
+import com.lyl.garfield.core.context.trace.TraceSegmentRef;
+import com.lyl.garfield.core.sampling.SamplingService;
 
 import java.util.LinkedList;
 import java.util.List;

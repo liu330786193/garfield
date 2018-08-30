@@ -18,8 +18,8 @@
 
 package com.lyl.garfield.core.context.ids;
 
-import com.timevale.cat.api.trace.DictionaryUtil;
-import com.timevale.cat.core.utils.NetworkSingleton;
+import com.lyl.garfield.api.trace.DictionaryUtil;
+import com.lyl.garfield.core.utils.NetworkSingleton;
 
 import java.util.Random;
 

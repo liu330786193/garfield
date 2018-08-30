@@ -19,8 +19,8 @@
 package com.lyl.garfield.core.boot;
 
 
-import com.timevale.cat.core.logging.api.ILog;
-import com.timevale.cat.core.logging.api.LogManager;
+import com.lyl.garfield.core.logging.api.ILog;
+import com.lyl.garfield.core.logging.api.LogManager;
 
 import java.io.File;
 import java.net.MalformedURLException;

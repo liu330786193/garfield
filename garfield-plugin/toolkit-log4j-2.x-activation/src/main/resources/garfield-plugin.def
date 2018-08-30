@@ -1,0 +1,1 @@
+toolkit-log4j2=com.lyl.garfield.plugin.toolkit.trace.activation.Log4j2OutputAppenderActivation

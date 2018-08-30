@@ -19,8 +19,8 @@
 package com.lyl.garfield.core.logging.core;
 
 
-import com.timevale.cat.core.logging.api.ILog;
-import com.timevale.cat.core.logging.api.LogResolver;
+import com.lyl.garfield.core.logging.api.ILog;
+import com.lyl.garfield.core.logging.api.LogResolver;
 
 /**
  * Created by wusheng on 2016/11/26.

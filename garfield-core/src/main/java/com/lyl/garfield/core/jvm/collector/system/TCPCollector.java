@@ -1,13 +1,13 @@
 package com.lyl.garfield.core.jvm.collector.system;
 
-import com.timevale.cat.core.utils.MixAll;
+import com.lyl.garfield.core.utils.MixAll;
 
 import java.io.File;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.timevale.cat.core.constants.CatAgentItemConstants.*;
+import static com.lyl.garfield.core.constants.CatAgentItemConstants.*;
 
 /**
  * https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/7/html/performance_tuning_guide/sect-red_hat_enterprise_linux-performance_tuning_guide-networking-monitoring_and_diagnosing_performance_problems#sect-Red_Hat_Enterprise_Linux-Performance_Tuning_Guide-Monitoring_and_diagnosing_performance_problems-procnetsnmp

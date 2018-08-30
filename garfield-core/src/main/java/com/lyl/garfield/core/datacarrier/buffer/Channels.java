@@ -18,7 +18,7 @@
 
 package com.lyl.garfield.core.datacarrier.buffer;
 
-import com.timevale.cat.core.datacarrier.partition.IDataPartitioner;
+import com.lyl.garfield.core.datacarrier.partition.IDataPartitioner;
 
 /**
  * Channels of Buffer

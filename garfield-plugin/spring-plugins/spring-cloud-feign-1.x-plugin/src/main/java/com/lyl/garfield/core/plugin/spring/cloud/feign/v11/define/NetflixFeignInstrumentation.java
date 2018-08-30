@@ -18,14 +18,14 @@
 
 package com.lyl.garfield.core.plugin.spring.cloud.feign.v11.define;
 
-import com.timevale.cat.core.plugin.interceptor.ConstructorInterceptPoint;
-import com.timevale.cat.core.plugin.interceptor.InstanceMethodsInterceptPoint;
-import com.timevale.cat.core.plugin.interceptor.enhance.ClassInstanceMethodsEnhancePluginDefine;
-import com.timevale.cat.core.plugin.match.ClassMatch;
+import com.lyl.garfield.core.plugin.interceptor.ConstructorInterceptPoint;
+import com.lyl.garfield.core.plugin.interceptor.InstanceMethodsInterceptPoint;
+import com.lyl.garfield.core.plugin.interceptor.enhance.ClassInstanceMethodsEnhancePluginDefine;
+import com.lyl.garfield.core.plugin.match.ClassMatch;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.matcher.ElementMatcher;
 
-import static com.timevale.cat.core.plugin.match.NameMatch.byName;
+import static com.lyl.garfield.core.plugin.match.NameMatch.byName;
 import static net.bytebuddy.matcher.ElementMatchers.named;
 
 /**
@@ -40,7 +40,7 @@ public class NetflixFeignInstrumentation extends ClassInstanceMethodsEnhancePlug
     /**
      * Intercept class.
      */
-    private static final String INTERCEPT_CLASS = "com.timevale.cat.plugin.feign.http.v9.DefaultHttpClientInterceptor";
+    private static final String INTERCEPT_CLASS = "com.lyl.garfield.plugin.feign.http.v9.DefaultHttpClientInterceptor";
 
     @Override
     protected ClassMatch enhanceClass() {

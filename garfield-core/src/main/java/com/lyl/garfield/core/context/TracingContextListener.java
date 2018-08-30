@@ -18,7 +18,7 @@
 
 package com.lyl.garfield.core.context;
 
-import com.timevale.cat.core.context.trace.TraceSegment;
+import com.lyl.garfield.core.context.trace.TraceSegment;
 
 public interface TracingContextListener {
     void afterFinished(TraceSegment traceSegment);
