@@ -84,7 +84,7 @@ public class GarfieldAgent {
                     logger.debug("On Transformation class {}.", typeDescription.getName());
                 }
 
-                com.lyl.garfield.agent.InstrumentDebuggingClass.INSTANCE.log(typeDescription, dynamicType);
+                InstrumentDebuggingClass.INSTANCE.log(typeDescription, dynamicType);
             }
 
             @Override
