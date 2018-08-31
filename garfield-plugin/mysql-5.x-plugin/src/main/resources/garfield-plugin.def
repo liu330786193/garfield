@@ -1,6 +1,6 @@
-mysql-5.x=com.lyl.garfield.plugin.jdbc.mysql.define.DriverInstrumentation
-mysql-5.x=com.lyl.garfield.plugin.jdbc.mysql.define.Mysql5xConnectionInstrumentation
-mysql-5.x=com.lyl.garfield.plugin.jdbc.mysql.define.Mysql50ConnectionInstrumentation
-mysql-5.x=com.lyl.garfield.plugin.jdbc.mysql.define.CallableInstrumentation
-mysql-5.x=com.lyl.garfield.plugin.jdbc.mysql.define.PreparedStatementInstrumentation
-mysql-5.x=com.lyl.garfield.plugin.jdbc.mysql.define.StatementInstrumentation
+mysql-5.x=com.lyl.garfield.plugin.mysql.v5.define.DriverInstrumentation
+mysql-5.x=com.lyl.garfield.plugin.mysql.v5.define.Mysql5xConnectionInstrumentation
+mysql-5.x=com.lyl.garfield.plugin.mysql.v5.define.Mysql50ConnectionInstrumentation
+mysql-5.x=com.lyl.garfield.plugin.mysql.v5.define.CallableInstrumentation
+mysql-5.x=com.lyl.garfield.plugin.mysql.v5.define.PreparedStatementInstrumentation
+mysql-5.x=com.lyl.garfield.plugin.mysql.v5.define.StatementInstrumentation

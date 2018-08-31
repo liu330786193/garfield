@@ -20,9 +20,6 @@
     <orderEntry type="module" module-name="garfield-api" />
     <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy:1.7.6" level="project" />
     <orderEntry type="library" name="Maven: com.lmax:disruptor:3.3.6" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.kafka:kafka-clients:0.11.0.0" level="project" />
-    <orderEntry type="library" name="Maven: net.jpountz.lz4:lz4:1.3.0" level="project" />
-    <orderEntry type="library" name="Maven: org.xerial.snappy:snappy-java:1.1.2.6" level="project" />
     <orderEntry type="library" name="Maven: io.protostuff:protostuff-core:1.6.0" level="project" />
     <orderEntry type="library" name="Maven: io.protostuff:protostuff-api:1.6.0" level="project" />
     <orderEntry type="library" name="Maven: io.protostuff:protostuff-runtime:1.6.0" level="project" />

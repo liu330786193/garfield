@@ -45,20 +45,20 @@ public class DefaultTraceSegmentRef implements Serializable {
         this.peerHost = peerHost;
     }
 
-    public String getParentApplicationInstanceId() {
-        return parentApplicationInstanceId;
-    }
-
     public String getEntryApplicationInstanceId() {
         return entryApplicationInstanceId;
     }
 
-    public void setParentApplicationInstanceId(String parentApplicationInstanceId) {
-        this.parentApplicationInstanceId = parentApplicationInstanceId;
-    }
-
     public void setEntryApplicationInstanceId(String entryApplicationInstanceId) {
         this.entryApplicationInstanceId = entryApplicationInstanceId;
+    }
+
+    public String getParentApplicationInstanceId() {
+        return parentApplicationInstanceId;
+    }
+
+    public void setParentApplicationInstanceId(String parentApplicationInstanceId) {
+        this.parentApplicationInstanceId = parentApplicationInstanceId;
     }
 
     public String getEntryOperationName() {

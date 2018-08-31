@@ -52,11 +52,11 @@ public class BaseDTO implements Serializable {
         this.ip = ip;
     }
 
-    public String getCat() {
-        return cat;
+    public void setCat(String cat) {
+        this.cat = cat;
     }
 
-    public void setCat(String garfield) {
-        this.cat = garfield;
+    public String getCat() {
+        return cat;
     }
 }

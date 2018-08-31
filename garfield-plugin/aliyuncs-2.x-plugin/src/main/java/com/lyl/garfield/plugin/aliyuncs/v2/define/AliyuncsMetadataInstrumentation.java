@@ -1,5 +1,20 @@
-package com.lyl.garfield.plugin.druid.v1.define;
-
+package com.lyl.garfield.plugin.aliyuncs.v2.define;/*
+ * Copyright 2017, OpenSkywalking Organization All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Project repository: https://github.com/OpenSkywalking/skywalking
+ */
 
 import com.lyl.garfield.core.plugin.interceptor.ConstructorInterceptPoint;
 import com.lyl.garfield.core.plugin.interceptor.InstanceMethodsInterceptPoint;
@@ -10,15 +25,19 @@ import net.bytebuddy.matcher.ElementMatcher;
 
 import static com.lyl.garfield.core.plugin.match.NameMatch.byName;
 import static net.bytebuddy.matcher.ElementMatchers.named;
-import static net.bytebuddy.matcher.ElementMatchers.takesArguments;
 
-public class DruidDataSourceInstrumentation extends ClassInstanceMethodsEnhancePluginDefine {
+/**
+ *
+ * @author zhangxin
+ */
+public class AliyuncsMetadataInstrumentation extends ClassInstanceMethodsEnhancePluginDefine {
 
-    private static final String ENHANCE_CLASS = "com.alibaba.druid.pool.DruidDataSource";
+    private static final String METADATA_ENHANCE_CLASS = "com.aliyun.oss.internal.OSSObjectOperation";
 
-    private static final String INTERCEPT_CLASS = "com.lyl.garfield.plugin.druid.v1.DruidDataSourceInterceptor";
+    private static final String METADATAE_METHOD = "getObjectMetadata";
 
-    private static final String METHOD = "getConnection";
+    private static final String METADATA_INTERCEPT_CLASS = "com.lyl.garfield.plugin.aliyuncs.v2.AliyuncsMetadataInterceptor";
+
 
     @Override
     protected ConstructorInterceptPoint[] getConstructorsInterceptPoints() {
@@ -31,12 +50,12 @@ public class DruidDataSourceInstrumentation extends ClassInstanceMethodsEnhanceP
                 new InstanceMethodsInterceptPoint() {
                     @Override
                     public ElementMatcher<MethodDescription> getMethodsMatcher() {
-                        return named(METHOD).and(takesArguments(1));
+                        return named(METADATAE_METHOD);
                     }
 
                     @Override
                     public String getMethodsInterceptor() {
-                        return INTERCEPT_CLASS;
+                        return METADATA_INTERCEPT_CLASS;
                     }
 
                     @Override
@@ -49,6 +68,6 @@ public class DruidDataSourceInstrumentation extends ClassInstanceMethodsEnhanceP
 
     @Override
     protected ClassMatch enhanceClass() {
-        return byName(ENHANCE_CLASS);
+        return byName(METADATA_ENHANCE_CLASS);
     }
 }

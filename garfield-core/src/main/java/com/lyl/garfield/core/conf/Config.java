@@ -18,9 +18,8 @@
 
 package com.lyl.garfield.core.conf;
 
-import com.lyl.garfield.core.kafka.ProtobufSerializer;
 import com.lyl.garfield.core.logging.core.LogLevel;
-import org.apache.kafka.common.serialization.StringSerializer;
+import io.protostuff.StringSerializer;
 
 /**
  * This is the core config in sniffer agent.
@@ -43,9 +42,7 @@ public class Config {
 
         public static int BUFFER_MEMORY = 33554432;
 
-        public static String KEY_SERIALIZER = StringSerializer.class.getName();
 
-        public static String VALUE_SERIALIZER = ProtobufSerializer.class.getName();
     }
 
     public static class Agent {
@@ -63,7 +60,7 @@ public class Config {
 
     public static class Logging{
 
-        public static String FILE_NAME = "cat-agent.log";
+        public static String FILE_NAME = "garfield-agent.log";
 
         public static String DIR = "";
 

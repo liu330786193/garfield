@@ -44,20 +44,20 @@ public class DefaultTraceSegment implements Serializable {
         this.spans = spans;
     }
 
-    public String getApplicationInstanceId() {
-        return applicationInstanceId;
-    }
-
     public String getApplicationId() {
         return applicationId;
     }
 
-    public void setApplicationInstanceId(String applicationInstanceId) {
-        this.applicationInstanceId = applicationInstanceId;
+    public String getApplicationInstanceId() {
+        return applicationInstanceId;
     }
 
     public void setApplicationId(String applicationId) {
         this.applicationId = applicationId;
+    }
+
+    public void setApplicationInstanceId(String applicationInstanceId) {
+        this.applicationInstanceId = applicationInstanceId;
     }
 
     public String getIp() {
