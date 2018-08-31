@@ -8,8 +8,8 @@ public class DefaultTraceSegmentRef implements Serializable {
     protected String traceSegmentId;
     protected int spanId = -1;
     protected String peerHost;
-    protected String entryAppligarfieldionInstanceId = DictionaryUtil.emptyValue();
-    protected String parentAppligarfieldionInstanceId = DictionaryUtil.emptyValue();
+    protected String entryApplicationInstanceId = DictionaryUtil.emptyValue();
+    protected String parentApplicationInstanceId = DictionaryUtil.emptyValue();
     protected String entryOperationName;
     protected String parentOperationName;
 
@@ -45,20 +45,20 @@ public class DefaultTraceSegmentRef implements Serializable {
         this.peerHost = peerHost;
     }
 
-    public String getEntryAppligarfieldionInstanceId() {
-        return entryAppligarfieldionInstanceId;
+    public String getParentApplicationInstanceId() {
+        return parentApplicationInstanceId;
     }
 
-    public void setEntryAppligarfieldionInstanceId(String entryAppligarfieldionInstanceId) {
-        this.entryAppligarfieldionInstanceId = entryAppligarfieldionInstanceId;
+    public String getEntryApplicationInstanceId() {
+        return entryApplicationInstanceId;
     }
 
-    public String getParentAppligarfieldionInstanceId() {
-        return parentAppligarfieldionInstanceId;
+    public void setParentApplicationInstanceId(String parentApplicationInstanceId) {
+        this.parentApplicationInstanceId = parentApplicationInstanceId;
     }
 
-    public void setParentAppligarfieldionInstanceId(String parentAppligarfieldionInstanceId) {
-        this.parentAppligarfieldionInstanceId = parentAppligarfieldionInstanceId;
+    public void setEntryApplicationInstanceId(String entryApplicationInstanceId) {
+        this.entryApplicationInstanceId = entryApplicationInstanceId;
     }
 
     public String getEntryOperationName() {

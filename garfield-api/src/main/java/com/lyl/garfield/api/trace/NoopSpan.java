@@ -18,6 +18,8 @@
 
 package com.lyl.garfield.api.trace;
 
+import com.lyl.garfield.api.component.Component;
+
 import java.io.Serializable;
 import java.util.Map;
 

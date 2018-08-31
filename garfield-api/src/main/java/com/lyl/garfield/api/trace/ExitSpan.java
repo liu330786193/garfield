@@ -19,6 +19,8 @@
 package com.lyl.garfield.api.trace;
 
 
+import com.lyl.garfield.api.component.Component;
+
 /**
  * The <code>ExitSpan</code> represents a jvm consumer point, such as Feign, Okhttp client for a Http jvm.
  *

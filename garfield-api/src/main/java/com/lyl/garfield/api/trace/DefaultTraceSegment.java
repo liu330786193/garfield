@@ -8,8 +8,8 @@ public class DefaultTraceSegment implements Serializable {
     protected String traceSegmentId;
     protected List<DefaultTraceSegmentRef> refs;
     protected List<DefaultTracingSpan> spans;
-    protected String appligarfieldionId;
-    protected String appligarfieldionInstanceId;
+    protected String applicationId;
+    protected String applicationInstanceId;
     protected String ip;
     protected List<String> rgts;
     protected boolean ignore = false;
@@ -44,20 +44,20 @@ public class DefaultTraceSegment implements Serializable {
         this.spans = spans;
     }
 
-    public String getAppligarfieldionId() {
-        return appligarfieldionId;
+    public String getApplicationInstanceId() {
+        return applicationInstanceId;
     }
 
-    public void setAppligarfieldionId(String appligarfieldionId) {
-        this.appligarfieldionId = appligarfieldionId;
+    public String getApplicationId() {
+        return applicationId;
     }
 
-    public String getAppligarfieldionInstanceId() {
-        return appligarfieldionInstanceId;
+    public void setApplicationInstanceId(String applicationInstanceId) {
+        this.applicationInstanceId = applicationInstanceId;
     }
 
-    public void setAppligarfieldionInstanceId(String appligarfieldionInstanceId) {
-        this.appligarfieldionInstanceId = appligarfieldionInstanceId;
+    public void setApplicationId(String applicationId) {
+        this.applicationId = applicationId;
     }
 
     public String getIp() {

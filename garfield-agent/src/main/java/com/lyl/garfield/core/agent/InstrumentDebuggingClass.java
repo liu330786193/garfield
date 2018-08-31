@@ -18,11 +18,11 @@
 
 package com.lyl.garfield.core.agent;
 
-import core.boot.AgentPackageNotFoundException;
-import core.boot.AgentPackagePath;
-import core.conf.Config;
-import core.logging.api.ILog;
-import core.logging.api.LogManager;
+import com.lyl.garfield.core.boot.AgentPackageNotFoundException;
+import com.lyl.garfield.core.boot.AgentPackagePath;
+import com.lyl.garfield.core.conf.Config;
+import com.lyl.garfield.core.logging.api.ILog;
+import com.lyl.garfield.core.logging.api.LogManager;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.DynamicType;
 

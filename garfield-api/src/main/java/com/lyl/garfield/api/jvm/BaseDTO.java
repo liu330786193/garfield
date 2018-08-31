@@ -18,7 +18,7 @@ public class BaseDTO implements Serializable {
     // 时间戳
     protected Object timestamp;
     // 类目
-    protected String garfield;
+    protected String cat;
 
     public String getApp() {
         return app;
@@ -52,11 +52,11 @@ public class BaseDTO implements Serializable {
         this.ip = ip;
     }
 
-    public String getgarfield() {
-        return garfield;
+    public String getCat() {
+        return cat;
     }
 
-    public void setgarfield(String garfield) {
-        this.garfield = garfield;
+    public void setCat(String garfield) {
+        this.cat = garfield;
     }
 }
