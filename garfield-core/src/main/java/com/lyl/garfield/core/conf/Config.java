@@ -19,7 +19,6 @@
 package com.lyl.garfield.core.conf;
 
 import com.lyl.garfield.core.logging.core.LogLevel;
-import io.protostuff.StringSerializer;
 
 /**
  * This is the core config in sniffer agent.
