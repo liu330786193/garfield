@@ -41,7 +41,9 @@ public class ComponentsDefine {
 
     public static final OfficialComponent HTTP_ASYNC_CLIENT = new OfficialComponent(8, "http_async_client");
 
-    public static final OfficialComponent ALIYUN_OSS = new OfficialComponent(9, "aliyun_oss");
+    public static final OfficialComponent ALIYUN_OSS = new OfficialComponent(9, "Aliyun_oss");
+
+    public static final OfficialComponent MONGODB = new OfficialComponent(10, "MongoDB");
 
     private static ComponentsDefine instance = new ComponentsDefine();
 
@@ -52,7 +54,7 @@ public class ComponentsDefine {
     }
 
     public ComponentsDefine() {
-        components = new String[10];
+        components = new String[11];
         addComponent(TOMCAT);
         addComponent(HTTPCLIENT);
         addComponent(MYSQL);
@@ -62,6 +64,7 @@ public class ComponentsDefine {
         addComponent(ACTIVE_MQ);
         addComponent(HTTP_ASYNC_CLIENT);
         addComponent(ALIYUN_OSS);
+        addComponent(MONGODB);
     }
 
     private void addComponent(OfficialComponent component) {
