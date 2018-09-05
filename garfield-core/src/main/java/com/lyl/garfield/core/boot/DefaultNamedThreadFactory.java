@@ -28,7 +28,7 @@ public class DefaultNamedThreadFactory implements ThreadFactory {
     private final AtomicInteger threadSeq = new AtomicInteger(0);
     private final String namePrefix;
     public DefaultNamedThreadFactory(String name) {
-        namePrefix = "SkywalkingAgent-" + BOOT_SERVICE_SEQ.incrementAndGet() + "-" + name + "-";
+        namePrefix = "garfield-" + BOOT_SERVICE_SEQ.incrementAndGet() + "-" + name + "-";
     }
     @Override
     public Thread newThread(Runnable r) {

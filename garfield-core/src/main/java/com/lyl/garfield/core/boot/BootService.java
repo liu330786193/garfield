@@ -26,6 +26,7 @@ package com.lyl.garfield.core.boot;
  * @author wushengss
  */
 public interface BootService {
+
     void beforeBoot() throws Throwable;
 
     void boot() throws Throwable;
@@ -33,4 +34,5 @@ public interface BootService {
     void afterBoot() throws Throwable;
 
     void shutdown() throws Throwable;
+
 }

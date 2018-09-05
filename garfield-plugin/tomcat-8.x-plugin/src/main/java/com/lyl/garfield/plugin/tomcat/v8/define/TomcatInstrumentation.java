@@ -29,9 +29,7 @@ import net.bytebuddy.matcher.ElementMatcher;
 import static com.lyl.garfield.core.plugin.match.NameMatch.byName;
 import static net.bytebuddy.matcher.ElementMatchers.named;
 
-/**
- * @author zhangxin
- */
+
 public class TomcatInstrumentation extends ClassInstanceMethodsEnhancePluginDefine {
 
     /**

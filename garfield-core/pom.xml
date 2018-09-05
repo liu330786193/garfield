@@ -26,10 +26,6 @@
         <shade.com.alibaba.target>${shade.package}.${shade.com.alibaba.source}</shade.com.alibaba.target>
         <shade.io.protostuff.source>io.protostuff</shade.io.protostuff.source>
         <shade.io.protostuff.target>${shade.package}.${shade.io.protostuff.source}</shade.io.protostuff.target>
-        <shade.org.slf4j.source>org.slf4j</shade.org.slf4j.source>
-        <shade.org.slf4j.target>${shade.package}.${shade.org.slf4j.source}</shade.org.slf4j.target>
-        <shade.log4j.source>org.apache.log4j</shade.log4j.source>
-        <shade.log4j.target>${shade.package}.${shade.log4j.source}</shade.log4j.target>
         <shade.snappy.source>org.xerial.snappy</shade.snappy.source>
         <shade.snappy.target>${shade.package}.${shade.snappy.source}</shade.snappy.target>
         <shade.jpountz.source>net.jpountz</shade.jpountz.source>
@@ -65,16 +61,6 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.17</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.25</version>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
     </dependencies>
@@ -117,14 +103,6 @@
                                     <pattern>${shade.com.alibaba.source}</pattern>
                                     <shadedPattern>${shade.com.alibaba.target}</shadedPattern>
                                 </relocation>
-                                <relocation>
-                                    <pattern>${shade.org.slf4j.source}</pattern>
-                                    <shadedPattern>${shade.org.slf4j.target}</shadedPattern>
-                                </relocation>
-                                <relocation>
-                                    <pattern>${shade.log4j.source}</pattern>
-                                    <shadedPattern>${shade.log4j.target}</shadedPattern>
-                                </relocation>.
                                 <relocation>
                                     <pattern>${shade.snappy.source}</pattern>
                                     <shadedPattern>${shade.snappy.target}</shadedPattern>

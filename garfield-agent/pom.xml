@@ -66,8 +66,6 @@
                                     <exclude>org.xerial.snappy:*</exclude>
                                     <exclude>io.protostuff:*</exclude>
                                     <exclude>com.alibaba:fastjson</exclude>
-                                    <exclude>org.slf4j:*</exclude>
-                                    <exclude>log4j:*</exclude>
                                     <exclude>net.jpountz.*:*</exclude>
                                 </excludes>
                             </artifactSet>

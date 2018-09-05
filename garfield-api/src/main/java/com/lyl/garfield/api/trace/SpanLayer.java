@@ -27,7 +27,8 @@ public enum SpanLayer implements Serializable {
     DB(1),
     RPC_FRAMEWORK(2),
     HTTP(3),
-    MQ(4);
+    MQ(4),
+    ELASTIC_JOB(5);
 
     private int code;
 
@@ -53,5 +54,9 @@ public enum SpanLayer implements Serializable {
 
     public static void asMQ(AbstractSpan span) {
         span.setLayer(SpanLayer.MQ);
+    }
+
+    public static void asElasticJob(AbstractSpan span) {
+        span.setLayer(SpanLayer.ELASTIC_JOB);
     }
 }

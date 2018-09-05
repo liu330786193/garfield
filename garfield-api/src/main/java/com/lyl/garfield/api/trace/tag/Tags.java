@@ -44,6 +44,10 @@ public final class Tags implements Serializable {
 
     public static final StringTag SIP = new StringTag("sip");
 
+    public static final StringTag CRON_EXPRESSION = new StringTag("cron_expression");
+
+
+
     public static final class HTTP {
         public static final StringTag METHOD = new StringTag("http.method");
     }

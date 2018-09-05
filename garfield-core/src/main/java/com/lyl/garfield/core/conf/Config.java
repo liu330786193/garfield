@@ -27,22 +27,6 @@ import com.lyl.garfield.core.logging.core.LogLevel;
  */
 public class Config {
 
-    public static class Kafka{
-//        public static String BOOTSTRAP_SERVERS = "10.31.55.56:6667,10.31.55.29:6667,10.31.55.53:6667";
-        public static String BOOTSTRAP_SERVERS = "localhost:9092";
-
-        public static String ACKS = "1";
-
-        public static int RETRIES = 0;
-
-        public static int BATCH_SIZE = 65535;
-
-        public static int LINGER_MS = 2000;
-
-        public static int BUFFER_MEMORY = 33554432;
-
-
-    }
 
     public static class Agent {
 
