@@ -49,6 +49,8 @@ public class ComponentsDefine {
 
     public static final OfficialComponent ELASTICSEARCH = new OfficialComponent(11, "Elasticsearch");
 
+    public static final OfficialComponent DUBBO = new OfficialComponent(12, "Elasticsearch");
+
     private static ComponentsDefine instance = new ComponentsDefine();
 
     private String[] components;
@@ -58,7 +60,7 @@ public class ComponentsDefine {
     }
 
     public ComponentsDefine() {
-        components = new String[12];
+        components = new String[13];
         addComponent(TOMCAT);
         addComponent(HTTPCLIENT);
         addComponent(MYSQL);
@@ -71,6 +73,7 @@ public class ComponentsDefine {
         addComponent(MONGODB);
         addComponent(ELASTIC_JOB);
         addComponent(ELASTICSEARCH);
+        addComponent(DUBBO);
     }
 
     private void addComponent(OfficialComponent component) {

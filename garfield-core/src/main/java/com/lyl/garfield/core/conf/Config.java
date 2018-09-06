@@ -30,7 +30,7 @@ public class Config {
 
     public static class Agent {
 
-        public static String APPLICATION_ID = "lyl";
+        public static String APPLICATION_ID = "";
 
         public static int SAMPLE_N_PER_3_SECS = -1;
 
@@ -49,7 +49,7 @@ public class Config {
 
         public static int MAX_FILE_SIZE = 300 * 1024 * 1024;
 
-        public static LogLevel LEVEL = LogLevel.DEBUG;
+        public static LogLevel LEVEL = LogLevel.INFO;
     }
 
     public static class Buffer {

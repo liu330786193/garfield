@@ -31,8 +31,8 @@ public class KafkaSender {
 
         if (logger.isDebugEnable()){
             System.out.println(JSON.toJSONString(traceSegment));
-            logger.debug(("Trace:" + JSON.toJSONString(traceSegment)));
         }
+        logger.info(("Trace:" + JSON.toJSONString(traceSegment)));
     }
 
     public static KafkaSender getInstance() {
