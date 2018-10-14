@@ -18,12 +18,14 @@
 
 package com.lyl.garfield.api.trace;
 
+import java.io.Serializable;
+
 /**
  * The <code>LocalSpan</code> represents a normal tracing point, such as a local method.
  *
  * @author wusheng
  */
-public class LocalSpan extends DefaultTracingSpan {
+public class LocalSpan extends DefaultTracingSpan implements Serializable {
 
     public LocalSpan(int spanId, int parentSpanId, String operationName) {
         super(spanId, parentSpanId, operationName);

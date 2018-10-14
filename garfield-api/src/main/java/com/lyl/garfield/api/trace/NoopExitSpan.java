@@ -18,7 +18,9 @@
 
 package com.lyl.garfield.api.trace;
 
-public class NoopExitSpan extends NoopSpan implements WithPeerInfo {
+import java.io.Serializable;
+
+public class NoopExitSpan extends NoopSpan implements WithPeerInfo, Serializable {
 
     private String peer;
 

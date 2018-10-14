@@ -29,7 +29,7 @@ import java.util.Map;
  *
  * @author wusheng
  */
-public class NoopSpan implements AbstractSpan,Serializable {
+public class NoopSpan implements AbstractSpan, Serializable {
     public NoopSpan() {
     }
 

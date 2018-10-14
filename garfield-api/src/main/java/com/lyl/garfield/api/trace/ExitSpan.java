@@ -21,6 +21,8 @@ package com.lyl.garfield.api.trace;
 
 import com.lyl.garfield.api.component.Component;
 
+import java.io.Serializable;
+
 /**
  * The <code>ExitSpan</code> represents a jvm consumer point, such as Feign, Okhttp client for a Http jvm.
  *
@@ -34,7 +36,7 @@ import com.lyl.garfield.api.component.Component;
  *
  * @author wusheng
  */
-public class ExitSpan extends StackBasedTracingSpan implements WithPeerInfo {
+public class ExitSpan extends StackBasedTracingSpan implements WithPeerInfo, Serializable {
 
     private String peer;
 

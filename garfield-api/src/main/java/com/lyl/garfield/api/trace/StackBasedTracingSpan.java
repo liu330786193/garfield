@@ -18,6 +18,8 @@
 
 package com.lyl.garfield.api.trace;
 
+import java.io.Serializable;
+
 /**
  * The <code>StackBasedTracingSpan</code> represents a span with an inside stack construction.
  *
@@ -25,7 +27,7 @@ package com.lyl.garfield.api.trace;
  *
  * @author wusheng
  */
-public abstract class StackBasedTracingSpan extends DefaultTracingSpan {
+public abstract class StackBasedTracingSpan extends DefaultTracingSpan implements Serializable {
     protected int stackDepth;
 
     protected StackBasedTracingSpan(int spanId, int parentSpanId, String operationName) {

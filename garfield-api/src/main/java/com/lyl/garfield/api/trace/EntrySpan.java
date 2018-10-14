@@ -20,6 +20,8 @@ package com.lyl.garfield.api.trace;
 
 import com.lyl.garfield.api.component.Component;
 
+import java.io.Serializable;
+
 /**
  * The <code>EntrySpan</code> represents a jvm provider point, such as tomcat server entrance.
  *
@@ -33,7 +35,7 @@ import com.lyl.garfield.api.component.Component;
  *
  * @author wusheng
  */
-public class EntrySpan extends StackBasedTracingSpan {
+public class EntrySpan extends StackBasedTracingSpan implements Serializable {
     private int currentMaxDepth;
 
     public EntrySpan(int spanId, int parentSpanId, String operationName) {
