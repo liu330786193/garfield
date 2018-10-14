@@ -27,6 +27,10 @@
         <module>httpclient-4.x-plugin</module>
         <module>aliyuncs-2.x-plugin</module>
         <module>druid-1.x-plugin</module>
+        <module>mongodb-3.x-plugin</module>
+        <module>elastic-job-2.x-plugin</module>
+        <module>elasticsearch-5.x-plugin</module>
+        <module>dubbo-2.x-plugin</module>
     </modules>
 
     <properties>

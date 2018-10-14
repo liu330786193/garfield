@@ -52,7 +52,7 @@ public class AgentPackagePath {
         if (resource != null) {
             String urlString = resource.toString();
 
-            logger.debug("The beacon class location is {}.", urlString);
+            logger.info("The beacon class location is {}.", urlString);
 
             int insidePathIndex = urlString.indexOf('!');
             boolean isInJar = insidePathIndex > -1;

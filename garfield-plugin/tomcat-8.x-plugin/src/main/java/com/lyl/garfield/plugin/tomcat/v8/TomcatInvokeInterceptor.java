@@ -74,9 +74,7 @@ public class TomcatInvokeInterceptor implements InstanceMethodsAroundInterceptor
 
     @Override public void handleMethodException(EnhancedInstance objInst, Method method, Object[] allArguments,
         Class<?>[] argumentsTypes, Throwable t) {
-        AbstractSpan span = ContextManager.activeSpan();
-        span.log(t);
-        span.errorOccurred();
+        ContextManager.activeSpan().log(t).errorOccurred();
     }
 
     public static String getAccessIp(HttpServletRequest request){

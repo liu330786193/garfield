@@ -39,9 +39,17 @@ public class ComponentsDefine {
   
     public static final OfficialComponent ACTIVE_MQ = new OfficialComponent(7, "ActiveMQ");
 
-    public static final OfficialComponent HTTP_ASYNC_CLIENT = new OfficialComponent(8, "http_async_client");
+    public static final OfficialComponent HTTP_ASYNC_CLIENT = new OfficialComponent(8, "Http_async_client");
 
-    public static final OfficialComponent ALIYUN_OSS = new OfficialComponent(9, "aliyun_oss");
+    public static final OfficialComponent ALIYUN_OSS = new OfficialComponent(9, "Aliyun_oss");
+
+    public static final OfficialComponent MONGODB = new OfficialComponent(10, "MongoDB");
+
+    public static final OfficialComponent ELASTIC_JOB = new OfficialComponent(11, "ElasticJob");
+
+    public static final OfficialComponent ELASTICSEARCH = new OfficialComponent(11, "Elasticsearch");
+
+    public static final OfficialComponent DUBBO = new OfficialComponent(12, "Elasticsearch");
 
     private static ComponentsDefine instance = new ComponentsDefine();
 
@@ -52,7 +60,7 @@ public class ComponentsDefine {
     }
 
     public ComponentsDefine() {
-        components = new String[10];
+        components = new String[13];
         addComponent(TOMCAT);
         addComponent(HTTPCLIENT);
         addComponent(MYSQL);
@@ -62,6 +70,10 @@ public class ComponentsDefine {
         addComponent(ACTIVE_MQ);
         addComponent(HTTP_ASYNC_CLIENT);
         addComponent(ALIYUN_OSS);
+        addComponent(MONGODB);
+        addComponent(ELASTIC_JOB);
+        addComponent(ELASTICSEARCH);
+        addComponent(DUBBO);
     }
 
     private void addComponent(OfficialComponent component) {

@@ -19,7 +19,6 @@
 package com.lyl.garfield.core.conf;
 
 import com.lyl.garfield.core.logging.core.LogLevel;
-import io.protostuff.StringSerializer;
 
 /**
  * This is the core config in sniffer agent.
@@ -28,26 +27,10 @@ import io.protostuff.StringSerializer;
  */
 public class Config {
 
-    public static class Kafka{
-//        public static String BOOTSTRAP_SERVERS = "10.31.55.56:6667,10.31.55.29:6667,10.31.55.53:6667";
-        public static String BOOTSTRAP_SERVERS = "localhost:9092";
-
-        public static String ACKS = "1";
-
-        public static int RETRIES = 0;
-
-        public static int BATCH_SIZE = 65535;
-
-        public static int LINGER_MS = 2000;
-
-        public static int BUFFER_MEMORY = 33554432;
-
-
-    }
 
     public static class Agent {
 
-        public static String APPLICATION_ID = "lyl";
+        public static String APPLICATION_ID = "";
 
         public static int SAMPLE_N_PER_3_SECS = -1;
 
@@ -66,7 +49,7 @@ public class Config {
 
         public static int MAX_FILE_SIZE = 300 * 1024 * 1024;
 
-        public static LogLevel LEVEL = LogLevel.DEBUG;
+        public static LogLevel LEVEL = LogLevel.INFO;
     }
 
     public static class Buffer {
@@ -86,5 +69,14 @@ public class Config {
     public static class Trace {
 
         public static int WAIT_TIME = 20;
+    }
+
+    public static class Plugin {
+        public static class MongoDB {
+            /**
+             * If true, trace all the parameters, default is false. Only trace the operation, not include parameters.
+             */
+            public static boolean TRACE_PARAM = false;
+        }
     }
 }
