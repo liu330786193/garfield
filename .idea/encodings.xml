@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$/garfield-core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/garfield-plugin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/garfield-plugin/activemq-5.x-plugin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/garfield-plugin/aliyuncs-2.x-plugin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/garfield-plugin/druid-1.x-plugin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/garfield-plugin/dubbo-2.x-plugin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/garfield-plugin/elastic-job-2.x-plugin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/garfield-plugin/elasticsearch-5.x-plugin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/garfield-plugin/feign-default-http-9.x-plugin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/garfield-plugin/httpclient-4.x-plugin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/garfield-plugin/jdbc-commons" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/garfield-plugin/mongodb-3.x-plugin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/garfield-plugin/mysql-5.x-plugin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/garfield-plugin/spring-plugins" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/garfield-plugin/spring-plugins/mvc-annotation-4.x-plugin" charset="UTF-8" />

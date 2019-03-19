@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/garfield-plugin/activemq-5.x-plugin/activemq-5.x-plugin.iml" filepath="$PROJECT_DIR$/garfield-plugin/activemq-5.x-plugin/activemq-5.x-plugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/garfield-plugin/aliyuncs-2.x-plugin/aliyuncs-2.x-plugin.iml" filepath="$PROJECT_DIR$/garfield-plugin/aliyuncs-2.x-plugin/aliyuncs-2.x-plugin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/garfield-toolkit/garfield-toolkit-log4j-2.x/cat-toolkit-log4j-2.x.iml" filepath="$PROJECT_DIR$/garfield-toolkit/garfield-toolkit-log4j-2.x/cat-toolkit-log4j-2.x.iml" />
       <module fileurl="file://$PROJECT_DIR$/garfield-plugin/druid-1.x-plugin/druid-1.x-plugin.iml" filepath="$PROJECT_DIR$/garfield-plugin/druid-1.x-plugin/druid-1.x-plugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/garfield-plugin/feign-default-http-9.x-plugin/feign-default-http-9.x-plugin.iml" filepath="$PROJECT_DIR$/garfield-plugin/feign-default-http-9.x-plugin/feign-default-http-9.x-plugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/garfield.iml" filepath="$PROJECT_DIR$/garfield.iml" />
@@ -17,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/garfield-toolkit/garfield-toolkit-trace/garfield-toolkit-trace.iml" filepath="$PROJECT_DIR$/garfield-toolkit/garfield-toolkit-trace/garfield-toolkit-trace.iml" />
       <module fileurl="file://$PROJECT_DIR$/garfield-plugin/httpclient-4.x-plugin/httpclient-4.x-plugin.iml" filepath="$PROJECT_DIR$/garfield-plugin/httpclient-4.x-plugin/httpclient-4.x-plugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/garfield-plugin/jdbc-commons/jdbc-commons.iml" filepath="$PROJECT_DIR$/garfield-plugin/jdbc-commons/jdbc-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/garfield-plugin/mongodb-3.x-plugin/mongodb-3.x-plugin.iml" filepath="$PROJECT_DIR$/garfield-plugin/mongodb-3.x-plugin/mongodb-3.x-plugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/garfield-plugin/spring-plugins/mvc-annotation-4.x-plugin/mvc-annotation-4.x-plugin.iml" filepath="$PROJECT_DIR$/garfield-plugin/spring-plugins/mvc-annotation-4.x-plugin/mvc-annotation-4.x-plugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/garfield-plugin/spring-plugins/mvc-annotation-commons/mvc-annotation-commons.iml" filepath="$PROJECT_DIR$/garfield-plugin/spring-plugins/mvc-annotation-commons/mvc-annotation-commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/garfield-plugin/mysql-5.x-plugin/mysql-5.x-plugin.iml" filepath="$PROJECT_DIR$/garfield-plugin/mysql-5.x-plugin/mysql-5.x-plugin.iml" />

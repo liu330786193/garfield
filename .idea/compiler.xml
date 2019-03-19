@@ -18,6 +18,7 @@
         <module name="garfield-toolkit-trace" />
         <module name="httpclient-4.x-plugin" />
         <module name="jdbc-commons" />
+        <module name="mongodb-3.x-plugin" />
         <module name="mvc-annotation-4.x-plugin" />
         <module name="mvc-annotation-commons" />
         <module name="mysql-5.x-plugin" />
@@ -33,6 +34,9 @@
       <module name="cat-toolkit-log4j-2.x" target="1.8" />
       <module name="cat-toolkit-trace" target="1.8" />
       <module name="druid-1.x-plugin" target="1.8" />
+      <module name="dubbo-2.x-plugin" target="1.8" />
+      <module name="elastic-job-2.x-plugin" target="1.8" />
+      <module name="elasticsearch-5.x-plugin" target="1.8" />
       <module name="feign-default-http-9.x-plugin" target="1.8" />
       <module name="garfield" target="1.5" />
       <module name="garfield-agent" target="8" />
@@ -44,6 +48,7 @@
       <module name="garfield-toolkit-trace" target="1.8" />
       <module name="httpclient-4.x-plugin" target="1.8" />
       <module name="jdbc-commons" target="1.8" />
+      <module name="mongodb-3.x-plugin" target="1.8" />
       <module name="mvc-annotation-4.x-plugin" target="1.8" />
       <module name="mvc-annotation-commons" target="1.8" />
       <module name="mysql-5.x-plugin" target="1.8" />
